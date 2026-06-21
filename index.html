@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vrushali Pote — Cybersecurity Consultant</title>
+<meta name="description" content="Vrushali Pote — VAPT, Web & Mobile App Security, Network Penetration Testing Consultant">
+
+<!-- ============================================================
+   FONTS
+   ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+   STYLES
+   ============================================================ -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+   BOOT LOADER
+   Full-screen overlay shown on first load, simulating a system
+   boot sequence. Edit the lines in #bootLines or in script.js
+   (look for `bootLines` array inside initBootSequence) to change
+   what gets printed. Remove this whole <div id="boot"> block (and
+   its CSS in style.css under "BOOT LOADER") to disable it entirely.
+   ============================================================ -->
+<div class="boot" id="boot" role="status" aria-live="polite">
+  <div class="boot__inner">
+    <div class="boot__lines" id="bootLines"></div>
+    <div class="boot__bar-track">
+      <div class="boot__bar-fill" id="bootBarFill"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+   BACKGROUND CANVAS (Three.js network mounts here)
+   ============================================================ -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ============================================================
+   NAV
+   ============================================================ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__brand">VP<span class="nav__brand-dot">.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#impact" data-nav>Impact</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#experience" data-nav>Experience</a></li>
+      <li><a href="#findings" data-nav>Findings</a></li>
+      <li><a href="#certifications" data-nav>Certifications</a></li>
+      <li><a href="#education" data-nav>Education</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================================================
+     SECTION: HERO
+     Edit name / title / tagline / status here.
+     ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">// security_consultant.init()</p>
+      <h1 class="hero__name">Vrushali&nbsp;Pote</h1>
+      <p class="hero__role">VAPT &amp; Application Security Consultant</p>
+      <p class="hero__tagline">
+        Cybersecurity consultant specializing in Vulnerability Assessment and
+        Penetration Testing, web and mobile application security, and network
+        penetration testing — analyzing and validating findings to eliminate
+        false positives, prioritize real-world risk, and turn raw scan output
+        into remediation that actually closes the gap.
+      </p>
+
+      <div class="hero__terminal" id="heroTerminal" aria-hidden="true">
+        <div class="hero__terminal-bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="hero__terminal-title">scan_status.log</span>
+        </div>
+        <div class="hero__terminal-body" id="terminalBody"></div>
+      </div>
+
+      <div class="hero__meta">
+        <a class="hero__meta-item" href="mailto:vrushalipote.20@gmail.com">
+          <span class="hero__meta-label">Email</span>
+          <span class="hero__meta-value">vrushalipote.20@gmail.com</span>
+        </a>
+        <a class="hero__meta-item" href="tel:+917821843896">
+          <span class="hero__meta-label">Phone</span>
+          <span class="hero__meta-value">+91 7821843896</span>
+        </a>
+        <div class="hero__meta-item">
+          <span class="hero__meta-label">Location</span>
+          <span class="hero__meta-value">Panvel, Mumbai</span>
+        </div>
+        <!-- Update href below with the real LinkedIn URL -->
+        <a class="hero__meta-item" href="#" target="_blank" rel="noopener">
+          <span class="hero__meta-label">LinkedIn</span>
+          <span class="hero__meta-value">View profile →</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-cue" aria-hidden="true"><span></span>scroll</div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: IMPACT
+     Pulls the numbers scattered across the resume into one place.
+     To add/remove a stat: copy or delete a .impact__card block.
+     Edit the number in .impact__num and the label in .impact__label.
+     ============================================================ -->
+  <section class="section" id="impact">
+    <div class="section__inner">
+      <p class="section__eyebrow">01 / Impact</p>
+      <h2 class="section__title">What the numbers say</h2>
+
+      <p class="impact__intro">
+        Proficient in leveraging industry-standard tools and vulnerability
+        scanners to deliver clear, actionable insights that streamline
+        remediation and strengthen overall security posture — across every
+        surface an organization exposes.
+      </p>
+
+      <div class="impact__grid">
+        <div class="impact__card">
+          <p class="impact__num">900<span class="impact__plus">+</span></p>
+          <p class="impact__label">Servers &amp; network devices assessed</p>
+        </div>
+        <div class="impact__card">
+          <p class="impact__num">30<span class="impact__plus">+</span></p>
+          <p class="impact__label">Web applications assessed</p>
+        </div>
+        <div class="impact__card">
+          <p class="impact__num">15</p>
+          <p class="impact__label">Mobile apps assessed (iOS &amp; Android)</p>
+        </div>
+        <div class="impact__card">
+          <p class="impact__num">API</p>
+          <p class="impact__label">Endpoints assessed across engagements</p>
+        </div>
+        <div class="impact__card">
+          <p class="impact__num">3</p>
+          <p class="impact__label">Hall of Fame recognitions (Nokia, BASF, Frappe)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: SKILLS
+     To add/remove a skill chip, copy/delete a <li> inside .skills__grid lists.
+     To add/remove a proficiency bar, copy/delete a .skillbar block
+     and change the --pct value (0–100) plus the label.
+     ============================================================ -->
+  <section class="section section--alt" id="skills">
+    <div class="section__inner">
+      <p class="section__eyebrow">02 / Capabilities</p>
+      <h2 class="section__title">Scan results: skill set</h2>
+
+      <div class="skillbars">
+        <div class="skillbar" style="--pct: 92">
+          <div class="skillbar__head">
+            <span class="skillbar__label">Web Application VAPT</span>
+            <span class="skillbar__pct">92%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+
+        <div class="skillbar" style="--pct: 88">
+          <div class="skillbar__head">
+            <span class="skillbar__label">Mobile Application VAPT</span>
+            <span class="skillbar__pct">88%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+
+        <div class="skillbar" style="--pct: 85">
+          <div class="skillbar__head">
+            <span class="skillbar__label">Network Penetration Testing</span>
+            <span class="skillbar__pct">85%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+
+        <div class="skillbar" style="--pct: 90">
+          <div class="skillbar__head">
+            <span class="skillbar__label">API Security Assessment</span>
+            <span class="skillbar__pct">90%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+
+        <div class="skillbar" style="--pct: 87">
+          <div class="skillbar__head">
+            <span class="skillbar__label">Vulnerability Validation &amp; Triage</span>
+            <span class="skillbar__pct">87%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+
+        <div class="skillbar" style="--pct: 80">
+          <div class="skillbar__head">
+            <span class="skillbar__label">Bug Bounty Hunting</span>
+            <span class="skillbar__pct">80%</span>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill"></div></div>
+        </div>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skills__card">
+          <h3 class="skills__card-title">Frameworks &amp; Methodology</h3>
+          <ul class="skills__list">
+            <li>OWASP Top 10</li>
+            <li>Bug bounty methodologies</li>
+            <li>Patch management</li>
+            <li>PCI-DSS aligned payment gateway review</li>
+          </ul>
+        </div>
+
+        <div class="skills__card">
+          <h3 class="skills__card-title">Tools</h3>
+          <ul class="skills__list skills__list--tools">
+            <li>Burp Suite</li>
+            <li>Kali Tools</li>
+            <li>Frida</li>
+            <li>Jadx</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: EXPERIENCE (incident-log style timeline)
+     To add a role: duplicate one .timeline__item block and edit.
+     To remove a role: delete its .timeline__item block.
+     ============================================================ -->
+  <section class="section" id="experience">
+    <div class="section__inner">
+      <p class="section__eyebrow">03 / Engagement Log</p>
+      <h2 class="section__title">Experience</h2>
+
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__marker"><span class="timeline__marker-dot timeline__marker-dot--active"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Consultant</h3>
+              <span class="timeline__status">ongoing</span>
+            </div>
+            <p class="timeline__org">Banking Client · Navi Mumbai, Maharashtra</p>
+            <p class="timeline__period">June 2025 — Present</p>
+            <ul class="timeline__bullets">
+              <li>Conducting regular security assessments across web and mobile applications, network infrastructure spanning 900+ servers and network devices, and APIs — with practical remediation recommendations.</li>
+              <li>Performing revalidation of fixes and ensuring timely closure of identified vulnerabilities against defined timelines.</li>
+              <li>Monitoring emerging vulnerabilities and recommending process improvements to strengthen the organization's security posture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"><span class="timeline__marker-dot timeline__marker-dot--active"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Associate Consultant</h3>
+              <span class="timeline__status">ongoing</span>
+            </div>
+            <p class="timeline__org">Anzen Technologies · Navi Mumbai, Maharashtra</p>
+            <p class="timeline__period">Feb 2024 — Present</p>
+            <ul class="timeline__bullets">
+              <li>Assessed security across 15 mobile applications on iOS and Android, identifying platform-specific vulnerabilities with comprehensive coverage.</li>
+              <li>Conducted security assessments for 30+ web applications using OWASP Top 10 methodology to detect and remediate vulnerabilities.</li>
+              <li>Reviewed mobile applications integrating payment gateways, ensuring safeguards for financial transactions in line with PCI-DSS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"><span class="timeline__marker-dot"></span></div>
+          <div class="timeline__content">
+            <div class="timeline__head">
+              <h3 class="timeline__role">Cyber Security Trainee</h3>
+            </div>
+            <p class="timeline__org">Anzen Technologies · Navi Mumbai, Maharashtra</p>
+            <p class="timeline__period">July 2023 — Jan 2024</p>
+            <ul class="timeline__bullets">
+              <li>Learned to identify and exploit common web vulnerabilities — SQL injection, XSS, and insecure direct object references.</li>
+              <li>Built hands-on proficiency with Burp Suite and Kali Tools for web testing, and Frida and Jadx for mobile testing.</li>
+              <li>Studied API security practices including OAuth authentication, authorization checks, and secure handling of sensitive data.</li>
+              <li>Practiced clear, actionable reporting of findings, impacts, and remediation steps for developers and stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: FINDINGS (Bug Bounty + Extra-curricular)
+     To add a finding card: duplicate a .findings__card block.
+     ============================================================ -->
+  <section class="section section--alt" id="findings">
+    <div class="section__inner">
+      <p class="section__eyebrow">04 / Findings</p>
+      <h2 class="section__title">Bug bounty &amp; community</h2>
+
+      <div class="findings__grid">
+        <div class="findings__card">
+          <span class="findings__severity findings__severity--high">Hall of Fame</span>
+          <p class="findings__text">Recognized by <strong>Nokia</strong>, <strong>BASF</strong>, and <strong>Frappe</strong> for responsibly disclosed vulnerabilities.</p>
+        </div>
+        <div class="findings__card">
+          <span class="findings__severity findings__severity--critical">Critical</span>
+          <p class="findings__text">Secured vulnerabilities on Indian Government websites.</p>
+        </div>
+        <div class="findings__card">
+          <span class="findings__severity findings__severity--medium">Reward</span>
+          <p class="findings__text">Earned swag from <strong>JIO</strong> for identifying a critical vulnerability.</p>
+        </div>
+        <div class="findings__card">
+          <span class="findings__severity findings__severity--info">Community</span>
+          <p class="findings__text">Writes cybersecurity content on Medium to support community learning, and engages students through cybersecurity talks and educational initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: CERTIFICATIONS
+     To add a cert: duplicate a .cert__chip span.
+     ============================================================ -->
+  <section class="section" id="certifications">
+    <div class="section__inner">
+      <p class="section__eyebrow">05 / Credentials</p>
+      <h2 class="section__title">Certifications</h2>
+      <div class="cert__row">
+        <span class="cert__chip">Certified Red Teaming Analyst — CRTA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: EDUCATION
+     ============================================================ -->
+  <section class="section section--alt" id="education">
+    <div class="section__inner">
+      <p class="section__eyebrow">06 / Education</p>
+      <h2 class="section__title">Education</h2>
+
+      <div class="edu__list">
+        <div class="edu__item">
+          <h3 class="edu__degree">Bachelor's Degree in Cybersecurity</h3>
+          <p class="edu__school">Indira College of Commerce and Science, Savitribai Phule Pune University</p>
+          <p class="edu__period">2020 — 2023</p>
+        </div>
+        <div class="edu__item">
+          <h3 class="edu__degree">S.S.C &amp; H.S.C</h3>
+          <p class="edu__school">MIT College, Savitribai Phule Pune University</p>
+          <p class="edu__period">2019</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SECTION: CONTACT
+     Direct contact details only — no contact form, by design.
+     To add/remove a contact method: copy or delete a .contact__card
+     block. Update the LinkedIn href with the real profile URL.
+     ============================================================ -->
+  <section class="section" id="contact">
+    <div class="section__inner">
+      <p class="section__eyebrow">07 / Contact</p>
+      <h2 class="section__title">Get in touch</h2>
+      <p class="contact__intro">
+        Open to new opportunities, collaborations, and conversations about
+        security. Reach out directly — whichever way works best for you.
+      </p>
+
+      <div class="contact__grid">
+        <a class="contact__card" href="mailto:vrushalipote.20@gmail.com">
+          <span class="contact__card-label">Email</span>
+          <span class="contact__card-value">vrushalipote.20@gmail.com</span>
+        </a>
+        <a class="contact__card" href="tel:+917821843896">
+          <span class="contact__card-label">Phone</span>
+          <span class="contact__card-value">+91 7821843896</span>
+        </a>
+        <div class="contact__card contact__card--static">
+          <span class="contact__card-label">Location</span>
+          <span class="contact__card-value">Panvel, Mumbai, Maharashtra</span>
+        </div>
+        <!-- Update href below with the real LinkedIn URL -->
+        <a class="contact__card" href="#" target="_blank" rel="noopener">
+          <span class="contact__card-label">LinkedIn</span>
+          <span class="contact__card-value">View profile →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+   FOOTER
+   ============================================================ -->
+<footer class="footer">
+  <p>Vrushali Pote — Cybersecurity Consultant</p>
+  <p class="footer__year">© <span id="footerYear"></span></p>
+</footer>
+
+<!-- ============================================================
+   SCRIPTS
+   Three.js via CDN — used only for the background network visual.
+   ============================================================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
