@@ -177,7 +177,7 @@ function initBootSequence(onComplete) {
     { text: 'loading consultant_profile.dat', className: 'boot-dim', delay: 80 },
     { text: 'mounting /vapt /web /mobile /api /network', className: 'boot-dim', delay: 100 },
     { text: 'permission level ............. ROOT ACCESS GRANTED', className: 'boot-root', delay: 380 },
-    { text: 'welcome back, Vrushali.', className: 'boot-ok', delay: 280 }
+    { text: 'Welcome to, VrushaliSec.', className: 'boot-ok', delay: 280 }
   ];
 
   // If reduced motion is requested, skip the typing animation and
